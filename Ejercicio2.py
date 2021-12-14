@@ -35,6 +35,32 @@ def verticalRooks(r1, r2):
             print(tableroajedrez[contador_indice])
             contador_indice += 1
         print("\n")
+    def movimiento(FILA, COLUMNA):
+    if FILA == 0:
+            tableroajedrez[FILA+1][COLUMNA] = tableroajedrez[FILA][COLUMNA]
+            tableroajedrez[FILA][COLUMNA] = ' '
+    elif FILA == 1:
+        if tableroajedrez[FILA+1][COLUMNA] != ' ':
+            tableroajedrez[FILA-1][COLUMNA] = tableroajedrez[FILA][COLUMNA]
+            tableroajedrez[FILA][COLUMNA] = ' '
+        else:
+            tableroajedrez[FILA+1][COLUMNA] = tableroajedrez[FILA][COLUMNA]
+            tableroajedrez[FILA][COLUMNA] = ' '
+    elif FILA == 2:
+        tableroajedrez[FILA-1][COLUMNA] = tableroajedrez[FILA][COLUMNA]
+        tableroajedrez[FILA][COLUMNA] = ' '
+
+def cambio(FILA, COLUMNA):
+    if FILA == 0:
+        FILA = FILA + 1
+    elif FILA == 1:
+        if tableroajedrez[FILA+1][COLUMNA] != ' ':
+            FILA = FILA - 1
+        else:
+            FILA = FILA + 1
+    elif FILA == 2:
+        FILA = FILA - 1
+    return FILA
 
 if __name__ == '__main__':
  fptr = open(os.environ['OUTPUT_PATH'], 'w')
