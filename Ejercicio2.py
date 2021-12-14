@@ -29,6 +29,13 @@ def verticalRooks(r1, r2):
             fallo = False
         return fallo
 
+    def printeartablero(tableroajedrez):
+        contador_indice = 0
+        for tableroajedrez[contador_indice] in tableroajedrez:
+            print(tableroajedrez[contador_indice])
+            contador_indice += 1
+        print("\n")
+
 if __name__ == '__main__':
  fptr = open(os.environ['OUTPUT_PATH'], 'w')
  t = int(input().strip())
