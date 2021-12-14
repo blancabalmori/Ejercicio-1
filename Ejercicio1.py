@@ -15,5 +15,5 @@ def minion_game (cadena):
         print ("Ganador, Kevin")
     else:
         print ("Empate :(")
-
-minion_game
+if __name__ == "__main__":
+    minion_game (cadena)
