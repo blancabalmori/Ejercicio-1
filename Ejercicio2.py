@@ -13,17 +13,21 @@ import sys
 # 2. INTEGER_ARRAY r2
 #
 def verticalRooks(r1, r2):
-    print('   |   |')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('   |   |')
-    print('-----------')
-    print('   |   |')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    print('   |   |')
+    from random import randint
+
+    def encerrada(FILA, COLUMNA):
+        if FILA == 0 and tableroajedrez[FILA + 1][COLUMNA] != ' ':
+            fallo = True
+        elif FILA == 1:
+            if tableroajedrez[FILA + 1][COLUMNA] != ' ' and tableroajedrez[FILA - 1][COLUMNA] != ' ':
+            fallo = True
+            else:
+                fallo = False
+        elif FILA == 2 and tableroajedrez[FILA - 1][COLUMNA] != ' ':
+                fallo = True
+        else:
+            fallo = False
+        return fallo
 
 if __name__ == '__main__':
  fptr = open(os.environ['OUTPUT_PATH'], 'w')
