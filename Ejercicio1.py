@@ -15,3 +15,5 @@ def minion_game (cadena):
         print ("Ganador, Kevin")
     else:
         print ("Empate :(")
+
+minion_game
