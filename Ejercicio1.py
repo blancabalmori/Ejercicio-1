@@ -1,4 +1,4 @@
-def juego (cadena):
+def minion_game (cadena):
     puntuacionstuart = 0
     puntuacionkevin = 0
     cadena = input("Escoja una palabra: ")
