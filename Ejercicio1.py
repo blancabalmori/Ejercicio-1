@@ -9,3 +9,7 @@ def minion_game (cadena):
         else: 
             puntuacionkevin += (len(cadena))
     print ("La puntuación de Stuart es " + puntuacionstuart + "y la puntuación de Kevin es " + puntuacionkevin)
+    if puntuacionstuart > puntuacionkevin:
+        print ("Ganador, Stuart")
+    else:
+        print ("Ganador, Kevin")
