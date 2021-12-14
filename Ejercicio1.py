@@ -2,7 +2,6 @@ def minion_game (cadena):
     puntuacionstuart = 0
     puntuacionkevin = 0
     vocal = 'aeiouAEIOU'
-    cadena = input("Escoja una palabra: ")
     for i in range (len(cadena)):
         if cadena[i] not in vocal:
             puntuacionstuart += (len(cadena))
@@ -15,5 +14,7 @@ def minion_game (cadena):
         print ("Ganador, Kevin")
     else:
         print ("Empate :(")
+
+cadena = input ("Escoja una palabra: ")
 if __name__ == "__main__":
     minion_game (cadena)
